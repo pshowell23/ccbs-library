@@ -83,6 +83,13 @@
     --ring: #a8481f;
     --radius: 0.75rem;
 
+    --page-bg: radial-gradient(
+        circle at 15% 0%,
+        #fbf2e2 0%,
+        #f7efe0 45%,
+        #f2e6ce 100%
+    );
+
     /* genre identity set — validated categorical palette, fixed order */
     --g-adventure: #b8502e;
     --g-scifi: #0891a0;
@@ -130,6 +137,13 @@
     --input: #5c4a34;
     --ring: #d97a52;
 
+    --page-bg: radial-gradient(
+        circle at 15% 0%,
+        #241c15 0%,
+        #1d1712 45%,
+        #17120d 100%
+    );
+
     /* dark-mode swaps two of the six genre hues for brighter, still-validated variants */
     --g-nonfiction: #a85c8a;
     --g-mystery: #5c7acc;
@@ -153,10 +167,11 @@
     * {
         @apply border-border outline-ring/50;
     }
-    body {
-        @apply bg-background text-foreground;
-    }
     html {
-        @apply font-sans;
+        background: var(--background);
+    }
+    body {
+        @apply text-foreground;
+        background: var(--page-bg);
     }
 }
