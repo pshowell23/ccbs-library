@@ -1,3 +1,6 @@
+import { signOut } from "./actions";
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
   return (
     <main className="flex flex-1 flex-col items-center justify-center gap-3 px-6 text-center">
@@ -5,6 +8,11 @@ export default function Home() {
         CCB&apos;s Library
       </h1>
       <p className="text-muted-foreground">the home library, tracked</p>
+      <form action={signOut}>
+        <Button type="submit" variant="outline">
+          Sign out
+        </Button>
+      </form>
     </main>
   );
 }
